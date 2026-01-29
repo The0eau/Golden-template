@@ -53,3 +53,11 @@ Pour maintenir une qualité de code optimale, nous suivons ces principes :
 * **Nommage** : Utilisez des noms de variables explicites et descriptifs (ex: `user_account_id` au lieu de `uid`).
 * **Documentation** : Commentez les blocs de logique complexes et mettez à jour la documentation si vous modifiez une fonctionnalité existante.
 * **Sécurité** : Chaque commit déclenche un scan de sécurité automatique. Assurez-vous qu'aucun avertissement n'est levé.
+
+## 🔒 Branch Protection Rules
+
+To ensure the stability and security of the `main` branch, we enforce the following protection rules:
+
+*   **Require a pull request before merging**: All changes must be made through a Pull Request (PR). Direct pushes to `main` are blocked.
+*   **Require status checks to pass before merging**: All automated checks in the CI pipeline (linting, tests, security scans) must pass before a PR can be merged.
+*   **Require signed commits**: All commits must be signed with a GPG key to verify the author's identity. This helps prevent commit spoofing.
