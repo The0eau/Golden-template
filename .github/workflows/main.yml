@@ -2,9 +2,9 @@ name: Security & Quality Scan
 
 on:
   push:
-    branches: [ main ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ main ]
+    branches: [ "main" ]
 
 jobs:
   audit:
@@ -12,11 +12,15 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Important pour Gitleaks pour scanner l'historique
 
       - name: Security Scan (Gitleaks)
         uses: gitleaks/gitleaks-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Run Linter
-        run: echo "Exécutez votre linter ici (ex: npm run lint)"
+      - name: Run Quality Check
+        run: |
+          echo "Lancement de l'analyse de qualité..."
+          # Ajoute ici tes commandes réelles (ex: flake8 . ou npm test)
