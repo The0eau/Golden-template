@@ -1,6 +1,6 @@
 # 🛡️ Mon Template Sécurisé
 
-[![Security Scan](https://github.com/VOTRE_NOM/VOTRE_REPO/actions/workflows/main.yml/badge.svg)](https://github.com/VOTRE_NOM/VOTRE_REPO/actions)
+[![Security Scan](https://github.com/The0eau/Golden-template/actions/workflows/main.yml/badge.svg)](https://github.com/The0eau/Golden-template/actions)
 
 Ceci est un template GitHub incluant :
 * ✅ Analyse de secrets (Gitleaks)
