@@ -2,4 +2,5 @@
 function init() {
   console.log("Le frontend est prêt !");
 }
+
 init();
